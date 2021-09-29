@@ -19,6 +19,17 @@ know whether this package might be useful for them.
 https://firebasestorage.googleapis.com/v0/b/average-6fee8.appspot.com/o/Screenshot_1632894903.png?alt=media&token=1939ed8f-0249-4e1c-b839-f2e5cf453b6d
 
 ## Getting started
+start using the package.
+
+
+
+
+## Usage
+
+TODO: Include short and useful examples for package users. Add longer examples
+to `/example` folder. 
+
+```dart
 import 'package:flutter/material.dart';
 import 'package:hover_card/hover_card.dart';
 void main() {
@@ -70,14 +81,6 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
-## Usage
-
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder. 
-
-```dart
-const like = 'sample';
 ```
 
 
