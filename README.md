@@ -16,12 +16,60 @@ know whether this package might be useful for them.
 
 ## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+https://firebasestorage.googleapis.com/v0/b/average-6fee8.appspot.com/o/Screenshot_1632894903.png?alt=media&token=1939ed8f-0249-4e1c-b839-f2e5cf453b6d
 
 ## Getting started
-
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+import 'package:flutter/material.dart';
+import 'package:hover_card/hover_card.dart';
+void main() {
+  runApp(MyApp());
+}
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Hover - Tilt 3D Effect',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+        visualDensity: VisualDensity.adaptivePlatformDensity,
+      ),
+      home: Material(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            const Text(
+              'Hover - Tilt 3D Effect. \n   instagram : xr_yr ',
+              style: TextStyle(
+                  fontSize: 30,
+                  fontWeight: FontWeight.w700,
+                  color: Colors.black,
+                  letterSpacing: 2),
+            ),
+            const SizedBox(height: 50),
+            SizedBox(
+              width: 150,
+              height: 300,
+              child: HoverCard(
+                builder: (context, hovering) {
+                  return Container(
+                    color: const Color(0xFFE9E9E9),
+                    child: const Center(
+                      child: FlutterLogo(size: 100),
+                    ),
+                  );
+                },
+                depth: 10,
+                depthColor: Colors.grey[500],
+                onTap: () => print('Hello, World!'),
+                shadow: BoxShadow(color: Colors.purple[100] as Color, blurRadius: 30, spreadRadius: -20, offset: const Offset(0, 40)),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
 
 ## Usage
 
@@ -32,8 +80,4 @@ to `/example` folder.
 const like = 'sample';
 ```
 
-## Additional information
 
-TODO: Tell users more about the package: where to find more information, how to 
-contribute to the package, how to file issues, what response they can expect 
-from the package authors, and more.
